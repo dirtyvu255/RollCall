@@ -18,6 +18,9 @@ import History from './screens/StudentScreens/History'
 import Chat from './screens/MainScreens/ChatScreen'
 import ChatList from './screens/StudentScreens/ChatList'
 
+import { LogBox } from 'react-native';
+LogBox.ignoreLogs(['Warning: ...']); // Ignore log notification by message
+LogBox.ignoreAllLogs();//Ignore all log notifications
 const Stack = createStackNavigator();
 export default class App extends React.Component {
   render() {

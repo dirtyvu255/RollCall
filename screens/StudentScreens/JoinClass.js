@@ -39,20 +39,20 @@ export default class JoinClass extends React.Component{
             name: this.state.nameClass,
             dayStart: this.state.dayStart
         })
-        // firestore().collection(`users/${userIDTeacher}/lists/${classID}/students`)
-        // .doc(idStudent)
-        // .set({
-        //     idStudent: idStudent,
-        //     nameStudent: nameStudent,
-        //     alphabet: nameStudent.split(' ').slice(-1)[0],
-        //     dayChecked: temp,
-        // }).then( () => {
-        //     Alert.alert(
-        //         "Thông báo",
-        //         "Đã tham gia lớp học!!",
-        //         // [{ text: "OK", onPress: () => this.toggleByHand() }]
-        //     )
-        // })
+        firestore().collection(`users/${userIDTeacher}/lists/${classID}/students`)
+        .doc(idStudent)
+        .set({
+            idStudent: idStudent,
+            nameStudent: nameStudent,
+            alphabet: nameStudent.split(' ').slice(-1)[0],
+            dayChecked: temp,
+        }).then( () => {
+            Alert.alert(
+                "Thông báo",
+                "Đã tham gia lớp học!!",
+                // [{ text: "OK", onPress: () => this.toggleByHand() }]
+            )
+        })
     }
     configData(data){
         console.log(data)

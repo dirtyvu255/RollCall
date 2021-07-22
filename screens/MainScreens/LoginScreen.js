@@ -68,12 +68,13 @@ export default class Login extends React.Component {
   render() {
     return (
       <View style={styles.mainContainer}>
-          <View style={{alignItems: 'center', marginTop: 30}}>
-            <Image source={Logo} style={styles.logoBLock}/>
-            <Text style={styles.textWelcome}>Chào mừng đến với RollCall!</Text>
-          </View>
+          
           {this.state.loginByEmail ? (
             <View>
+              <View style={{alignItems: 'center', marginTop: 120}}>
+                <Image source={Logo} style={styles.logoBLock}/>
+                <Text style={styles.textWelcome}>Chào mừng đến với RollCall!</Text>
+              </View>
               <View style={styles.container}>
                 <View style={{marginTop: 5, marginBottom: 20}}>
                   <TextInput
@@ -109,6 +110,10 @@ export default class Login extends React.Component {
             </View>
           ):(
             <View>
+              <View style={{alignItems: 'center', marginTop: 40}}>
+                <Image source={Logo} style={styles.logoBLock}/>
+                <Text style={styles.textWelcome}>Chào mừng đến với RollCall!</Text>
+              </View>
               <View style={styles.container}>
                 <View style={{marginTop: 15, flexDirection: 'row', justifyContent: 'space-between'}}>
                   <TextInput

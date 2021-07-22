@@ -40,7 +40,7 @@ export default class CheckIn extends React.Component{
             accuracy = 1
         )
 
-        if(distance < 100){
+        if(distance < 70){
             console.log(distance)
             this.checkIn()
         }

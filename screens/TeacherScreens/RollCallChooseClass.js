@@ -98,6 +98,7 @@ export default class RollCallChooseClass extends React.Component{
             writeFile(file, wbout, 'ascii').then((res) =>{
                     Alert.alert("Xuất thành công", "Địa chỉ:" + file);
                     // Alert.alert("Xuất thành công");
+                    console.log(file)
             }).catch((err) => { Alert.alert("exportFile Error", "Error " + err.message); });    
         }) 
     }
